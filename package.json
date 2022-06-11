@@ -2,16 +2,13 @@
   "name": "svelte-app",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://phanuwit13.github.io",
   "scripts": {
     "build": "rollup -c",
     "build:dev": "env-cmd -f .env.development npm run build && firebase deploy -P dev",
     "build:prod": "env-cmd -f .env.production npm run build && firebase deploy -P prod",
     "dev": "rollup -c -w",
     "start": "sirv public -s",
-    "start:dev": "sirv public --dev -s",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d public"
+    "start:dev": "sirv public --dev -s"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^17.0.0",
