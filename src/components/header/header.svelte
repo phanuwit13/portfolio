@@ -42,11 +42,11 @@
     checkedValue === true
       ? window.document.body.classList.add('dark-mode')
       : window.document.body.classList.remove('dark-mode')
-    
+
     store.darkMode.set({
       type: 'DARK_MODE_SUCCESS',
       data: {
-        darkMode:checked,
+        darkMode: checked,
       },
     })
   }
@@ -59,7 +59,8 @@
         <a class="navbar-brand col-2 col-md-1" href="#"
           ><img height="60px" width="60px" src={pk} alt="" /></a
         >
-        <div class="col-8 d-flex d-md-none gap-2">
+        <div class="col-7 d-flex d-md-none gap-2" />
+        <div class="col-2 d-flex d-md-none gap-2">
           <div
             class="d-flex justify-content-center align-items-center position-relative"
           >
@@ -109,7 +110,7 @@
               </div>
             </Switch>
           </div>
-          <button
+          <!-- <button
             class="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
@@ -119,13 +120,13 @@
             aria-label="Toggle navigation"
           >
             <span class="navbar-toggler-icon size-sm" />
-          </button>
+          </button> -->
         </div>
         <div
           class="collapse navbar-collapse col-8 col-md-8"
           id="navbarNavAltMarkup"
         >
-          <div class=" d-flex justify-content-center w-100">
+          <!-- <div class=" d-flex justify-content-center w-100">
             <div class="navbar-nav gap-4">
               <Link
                 class={`nav-link ${$location.pathname === '/' ? 'active' : ''}`}
@@ -144,7 +145,7 @@
                 to="/pricing">Pricing</Link
               >
             </div>
-          </div>
+          </div> -->
         </div>
         <div class="d-none d-md-flex align-items-center col-1 col-md-1">
           <Switch

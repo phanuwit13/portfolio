@@ -8,7 +8,7 @@
   }
 </script>
 
-<div class="row p-2 mb-4">
+<div class="banner-container row p-2 mb-4 flex-column-reverse flex-md-row gy-5">
   <div
     class="banner-details col-12 col-md-7 d-flex justify-content-end align-items-center flex-column px-4 gap-4 text-focus-in"
   >
@@ -29,13 +29,18 @@
       <img class="img-profile" src={me} alt="" />
     </div>
   </div>
+  <div class="background-banner position-absolute" />
 </div>
 
 <style>
   :global(body.dark-mode) {
     background-color: #212327 !important;
   }
+  .banner-container {
+    margin-top: 40px;
+  }
   .title {
+    text-align: center;
     font-size: 3.5rem;
     font-weight: 600;
   }
@@ -56,6 +61,17 @@
   }
   .banner-details {
     color: #212529;
+    /* margin-top: -60px; */
+  }
+  .background-banner {
+    z-index: -1;
+    width: 100%;
+    background-color: #f8f9fa;
+    min-height: 400px;
+    top: 0px;
+  }
+  :global(body.dark-mode) .background-banner {
+    background-color: #555555;
   }
   :global(body.dark-mode) .banner-details {
     color: #f8f9fa;
@@ -121,6 +137,45 @@
       -webkit-filter: blur(0px);
       filter: blur(0px);
       opacity: 1;
+    }
+  }
+  @media only screen and (max-width: 1199px) {
+    .background-banner {
+      min-height: 450px;
+    }
+  }
+  @media only screen and (max-width: 992px) {
+    .background-banner {
+      min-height: 500px;
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    .title {
+      font-size: 2.75rem;
+    }
+    .background-banner {
+      top: 500px;
+      min-height: 300px;
+    }
+  }
+  @media only screen and (max-width: 512px) {
+    .title {
+      font-size: 2rem;
+    }
+  }
+  @media only screen and (max-width: 414px) {
+    .background-banner {
+      top: 500px;
+      min-height: 330px;
+    }
+  }
+  @media only screen and (max-width: 375px) {
+    .title {
+      font-size: 1.75rem;
+    }
+    .background-banner {
+      top: 450px;
+      min-height: 400px;
     }
   }
 </style>

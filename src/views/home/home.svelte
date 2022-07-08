@@ -6,8 +6,6 @@
 
 <div>
   <div class="container-content container-sm position-relative">
-    <div class="background-banner position-absolute">
-    </div>
     <div class=''>
       <Banner />
       <Experience />
