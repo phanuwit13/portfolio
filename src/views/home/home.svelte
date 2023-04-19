@@ -2,6 +2,7 @@
   // import { onMount } from 'svelte'
   import Banner from '../../components/home/banner/banner.svelte'
   import Experience from '../../components/home/experience/experience.svelte'
+  import Portfolio from '../../components/home/portfolio/portfolio.svelte'
 </script>
 
 <div>
@@ -9,6 +10,7 @@
     <div class=''>
       <Banner />
       <Experience />
+      <Portfolio />
     </div>
   </div>
 </div>

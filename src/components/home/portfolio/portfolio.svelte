@@ -5,51 +5,35 @@
   import Education from '../../icon/education/index.svelte'
   import FullStack from '../../icon/stack/index.svelte'
   import FrontEnd from '../../icon/frontEnd/index.svelte'
-  import Instructor from '../../icon/Instructor/index.svelte'
+  import Folder from '../../icon/document/index.svelte'
 
-  const experienceData = [{
-      image: FrontEnd,
-      position: 'Front-End Developer',
-      work: 'HarmonyX Solution Co., Ltd.',
-      time: 'Otc 2565 - Now',
+  const workData = [
+    {
+      image: Folder,
+      name: 'Portfolio',
+      work: 'Svelte + Bootstrap',
+      url: 'https://phanuwit-k.pages.dev/',
+      git: '',
       detail:
-        'I currently work as a Front-End Developer at HarmonyX Solution Co., Ltd. My responsibilities include web e-commerce, web application back office and implemented software solutions based on the company requirements such as implemented new feature for customer.',
+        'Web Portfolio is an online representation of work you have created, as well as your skills and experiences built using Svelte and Bootstrap.',
       active: false,
     },
     {
-      image: Instructor,
-      position: 'Front-End Development Instructor',
-      work: 'WeStride',
-      time: 'May 2564 - Now',
+      image: Folder,
+      name: 'Todo Task Application',
+      work: 'NuxtJS + Tailwind + Hasura',
+      url: 'https://todo-list-webapplication.pages.dev/',
       detail:
-        'I currently work as a Front-End Development Instructor at WeStride. My responsibilities include provide advice and answer student questions in courses about website development such as HTML, CSS, javascript and reacts.',
+        'Todo Task Application is a web application with user authentication using Hasura and a simple interface for creating, updating, and deleting task. Built using Nuxt.js, a powerful. It also features Tailwind CSS for a responsive and customizable user interface.',
       active: false,
     },
     {
-      image: FrontEnd,
-      position: 'Front-End Developer',
-      work: 'Chomchobgroup Co.,Ltd.',
-      time: 'Apr 2564 - Otc 2565',
+      image: Folder,
+      name: 'Pokedex Application',
+      work: 'Vite.js + Tailwind',
+      url: 'https://pokedex-project.pages.dev/',
       detail:
-        'I work as a Front-End Developer at Chomchobgroup Co., Ltd. My responsibilities include Web Shopping, platform redeems point web preview, token sale platform, web crypto convert and web application sale NFT ticket.',
-      active: false,
-    },
-    {
-      image: FullStack,
-      position: 'Full-Stack Developer',
-      work: 'Digio (Thailand) Co., Ltd',
-      time: 'Nov 2563 - Mar 2564',
-      detail:
-        "I developed Front-End and Back-End. I'm learning about Front-End using reactjs and nextjs, Back-End using expressjs. My responsibilities include web application for donation and fixed bug for back office or assign tasks for me.",
-      active: false,
-    },
-    {
-      image: Education,
-      position: 'Computer Engineering',
-      work: 'RMUTI',
-      time: 'Jun 2560 - Mar 2564',
-      detail:
-        'I graduated with a bachelor’s degree in Computer Engineering from Rajamangala University of Technology Isan, In my course of study I study about OOP ,Machine Learning, Computer Vision,Data Structure, Web Programing, etc.',
+        "A web Pokedex list is a site that provides detailed information about Pokemon, including stats, moves, and evolution details, searchable by name or type. It's a valuable resource for Pokemon fans and players.",
       active: false,
     },
   ]
@@ -65,7 +49,7 @@
   }
 
   const hoverCard = (index) => {
-    experienceData[index].active = !experienceData[index].active
+    workData[index].active = !workData[index].active
   }
 
   const checkIconColor = (active, dark) => {
@@ -88,10 +72,10 @@
     <div
       class="text-focus-in col-12 col-sm-12  col-md-6 col-lg-4 d-flex flex-column"
     >
-      <span class="experience-tag">Resume</span>
-      <span class="experience-titel"> Education & Experience</span>
+      <span class="experience-tag">Portfolio</span>
+      <span class="experience-titel"> Project & Website</span>
     </div>
-    {#each experienceData as item, index}
+    {#each workData as item, index}
       <div class="col-12 col-sm-12  col-md-6 col-lg-4 text-focus-in">
         <div
           on:mouseleave={() => {
@@ -107,15 +91,17 @@
               fill={checkIconColor(item.active, $darkModeStore.data.darkMode)}
             />
           </div>
-          <div class="experience-card-title">
-            {item.position}
-          </div>
+          <a
+            href={item.url}
+            target="_blank"
+            class="experience-card-title"
+            rel="noopener noreferrer"
+          >
+            {item.name}
+          </a>
           <div class="d-flex justify-content-between">
             <div class="experience-card-subtitle">
               {item.work}
-            </div>
-            <div class="experience-card-time ">
-              {item.time}
             </div>
           </div>
           <div class="experience-card-detail">
@@ -178,10 +164,10 @@
   :global(body.dark-mode) .experience-card:hover .experience-card-detail {
     color: #ffffff;
   }
-  .experience-card:hover .experience-card-time {
+  .experience-card:hover {
     color: #ffffff;
   }
-  :global(body.dark-mode) .experience-card:hover .experience-card-time {
+  :global(body.dark-mode) .experience-card:hover {
     color: #212327;
   }
   .experience-card:hover::before {
@@ -197,19 +183,25 @@
     font-weight: 500;
   }
   .experience-card-title {
+    width: fit-content;
+    text-decoration: none;
+    color: #212529;
     font-size: 1.25rem;
     font-weight: 500;
   }
+
+  .experience-card-title:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 1.4px;
+  }
+
   .experience-card-subtitle {
+    color: #212529;
     font-size: 1rem;
     font-weight: 500;
   }
-  .experience-card-time {
-    color: #5fa8d3;
-    font-size: 0.75rem;
-    font-weight: 500;
-  }
   .experience-card-detail {
+    color: #212529;
     font-size: 0.75rem;
   }
 
