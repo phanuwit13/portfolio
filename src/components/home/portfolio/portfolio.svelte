@@ -1,10 +1,6 @@
 <script>
-  import { onMount } from 'svelte'
   import store from '../../../store/store.js'
 
-  import Education from '../../icon/education/index.svelte'
-  import FullStack from '../../icon/stack/index.svelte'
-  import FrontEnd from '../../icon/frontEnd/index.svelte'
   import Folder from '../../icon/document/index.svelte'
 
   const workData = [
@@ -13,7 +9,7 @@
       name: 'Portfolio',
       work: 'Svelte + Bootstrap',
       url: 'https://phanuwit-k.pages.dev/',
-      git: '',
+      git: 'https://github.com/phanuwit13/portfolio',
       detail:
         'Web Portfolio is an online representation of work you have created, as well as your skills and experiences built using Svelte and Bootstrap.',
       active: false,
@@ -23,6 +19,7 @@
       name: 'Todo Task Application',
       work: 'NuxtJS + Tailwind + Hasura',
       url: 'https://todo-list-webapplication.pages.dev/',
+      git: 'https://github.com/phanuwit13/todo-list-webapplication',
       detail:
         'Todo Task Application is a web application with user authentication using Hasura and a simple interface for creating, updating, and deleting task. Built using Nuxt.js, a powerful. It also features Tailwind CSS for a responsive and customizable user interface.',
       active: false,
@@ -32,8 +29,29 @@
       name: 'Pokedex Application',
       work: 'Vite.js + Tailwind',
       url: 'https://pokedex-project.pages.dev/',
+      git: 'https://github.com/phanuwit13/pokedex-project',
       detail:
         "A web Pokedex list is a site that provides detailed information about Pokemon, including stats, moves, and evolution details, searchable by name or type. It's a valuable resource for Pokemon fans and players.",
+      active: false,
+    },
+    {
+      image: Folder,
+      name: 'Management Activity RMUTI',
+      work: 'PHP + Bootstrap',
+      url: 'https://www.cpe.rmuti.ac.th/project/mini_activity/',
+      git: 'https://github.com/phanuwit13/webmini',
+      detail:
+        'The university event management website simplifies event planning by enabling users to add, edit, and delete events and activity units. Its user-friendly interface keeps students informed about upcoming events and streamlines the process for event coordinators.',
+      active: false,
+    },
+    {
+      image: Folder,
+      name: 'Movie List',
+      work: 'Angular + Tailwind',
+      url: 'https://movie-market-place.pages.dev/',
+      git: 'https://github.com/phanuwit13/movie-market-place',
+      detail:
+        'This website displays information on the most popular and highly-rated movies and TV series currently in theaters. Users can browse details such as plot summaries, cast and crew information, and user ratings, making it a valuable resource for movie and TV enthusiasts.',
       active: false,
     },
   ]
@@ -43,7 +61,6 @@
 
   $: if ($darkModeStore) {
     if ($darkModeStore.type === 'DARK_MODE_SUCCESS') {
-      // userAddress = $darkModeStore.data
       console.log('darkModeStore', $darkModeStore)
     }
   }
@@ -66,23 +83,25 @@
 </script>
 
 <div
-  class="container-experience d-flex justify-content-center align-items-center flex-column gap-4  px-4"
+  class="container-experience d-flex justify-content-center align-items-center flex-column gap-4 px-4"
 >
   <div class="row w-100 gy-4 my-4">
     <div
-      class="text-focus-in col-12 col-sm-12  col-md-6 col-lg-4 d-flex flex-column"
+      class="text-focus-in col-12 col-sm-12 col-md-6 col-lg-4 d-flex flex-column"
     >
       <span class="experience-tag">Portfolio</span>
       <span class="experience-titel"> Project & Website</span>
     </div>
     {#each workData as item, index}
-      <div class="col-12 col-sm-12  col-md-6 col-lg-4 text-focus-in">
-        <div
+      <div class="col-12 col-sm-12 col-md-6 col-lg-4 text-focus-in">
+        <a
+          href={item.git}
+          target="_blank"
           on:mouseleave={() => {
             hoverCard(index)
           }}
           on:mouseenter={() => hoverCard(index)}
-          class="experience-card h-100 p-3 d-flex flex-column gap-2"
+          class="experience-card h-100 p-3 d-flex flex-column gap-2 text-decoration-none"
         >
           <div>
             <svelte:component
@@ -107,7 +126,7 @@
           <div class="experience-card-detail">
             {item.detail}
           </div>
-        </div>
+        </a>
       </div>
     {/each}
   </div>
