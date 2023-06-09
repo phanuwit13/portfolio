@@ -26,6 +26,16 @@
     },
     {
       image: Folder,
+      name: 'E-Commerce',
+      work: 'Next.js + Tailwind',
+      url: 'https://e-commerce-aij.pages.dev/',
+      git: 'https://github.com/phanuwit13?tab=repositories',
+      detail:
+        "E-Commerce is a web application developed with Next.js and Tailwind CSS. With login, add to cart, product listing, and product detail features, I create a seamless shopping experience for users. By implementing these tools.",
+      active: false,
+    },
+    {
+      image: Folder,
       name: 'Pokedex Application',
       work: 'Vite.js + Tailwind',
       url: 'https://pokedex-project.pages.dev/',
