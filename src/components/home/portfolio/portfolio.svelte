@@ -29,9 +29,9 @@
       name: 'E-Commerce',
       work: 'Next.js + Tailwind',
       url: 'https://e-commerce-aij.pages.dev/',
-      git: 'https://github.com/phanuwit13?tab=repositories',
+      git: 'https://github.com/phanuwit13/e-commerce',
       detail:
-        "E-Commerce is a web application developed with Next.js and Tailwind CSS. With login, add to cart, product listing, and product detail features, I create a seamless shopping experience for users. By implementing these tools.",
+        'E-Commerce is a web application developed with Next.js and Tailwind CSS. With login, add to cart, product listing, and product detail features, I create a seamless shopping experience for users. By implementing these tools.',
       active: false,
     },
     {
@@ -62,6 +62,26 @@
       git: 'https://github.com/phanuwit13/movie-market-place',
       detail:
         'This website displays information on the most popular and highly-rated movies and TV series currently in theaters. Users can browse details such as plot summaries, cast and crew information, and user ratings, making it a valuable resource for movie and TV enthusiasts.',
+      active: false,
+    },
+    {
+      image: Folder,
+      name: 'Video Meeting',
+      work: 'Next.js + Twilio Video',
+      url: 'https://video-meeing.pages.dev/',
+      git: 'https://github.com/phanuwit13/video-meeing',
+      detail:
+        'Video Meeting is a straightforward web application for one-on-one video calls, utilizing Next.js and Twilio Video. It offers a simple, user-friendly interface for personal and professional online meetings without the complexities of larger platforms.',
+      active: false,
+    },
+    {
+      image: Folder,
+      name: 'Countdown Birthday',
+      work: 'React.js',
+      url: 'https://countdown-to-birthday.pages.dev/',
+      git: 'https://github.com/phanuwit13/westride-basicReact-useState/tree/final',
+      detail:
+        'A React.js web app providing a personalized birthday countdown timer.',
       active: false,
     },
   ]
@@ -213,7 +233,7 @@
   }
   .experience-card-title {
     width: fit-content;
-    text-decoration: none;
+    /* text-decoration: none; */
     color: #212529;
     font-size: 1.25rem;
     font-weight: 500;
