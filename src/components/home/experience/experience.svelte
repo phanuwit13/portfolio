@@ -7,11 +7,12 @@
   import FrontEnd from '../../icon/frontEnd/index.svelte'
   import Instructor from '../../icon/Instructor/index.svelte'
 
-  const experienceData = [{
-      image: FrontEnd,
-      position: 'Front-End Developer',
-      work: 'HarmonyX Solution Co., Ltd.',
-      time: 'Otc 2565 - Now',
+  const experienceData = [
+    {
+      image: FullStack,
+      position: 'Senior Software Engineer',
+      work: 'Big C Supercenter Public Company Limited',
+      time: 'Aug 2566 - Now',
       detail:
         'I currently work as a Front-End Developer at HarmonyX Solution Co., Ltd. My responsibilities include web e-commerce, web application back office and implemented software solutions based on the company requirements such as implemented new feature for customer.',
       active: false,
@@ -28,6 +29,15 @@
     {
       image: FrontEnd,
       position: 'Front-End Developer',
+      work: 'HarmonyX Solution Co., Ltd.',
+      time: 'Otc 2565 - Aug 2566',
+      detail:
+        'I currently work as a Front-End Developer at HarmonyX Solution Co., Ltd. My responsibilities include web e-commerce, web application back office and implemented software solutions based on the company requirements such as implemented new feature for customer.',
+      active: false,
+    },
+    {
+      image: FrontEnd,
+      position: 'Front-End Developer',
       work: 'Chomchobgroup Co.,Ltd.',
       time: 'Apr 2564 - Otc 2565',
       detail:
@@ -36,7 +46,7 @@
     },
     {
       image: FullStack,
-      position: 'Full-Stack Developer',
+      position: 'Full-Stack Developer (internship)',
       work: 'Digio (Thailand) Co., Ltd',
       time: 'Nov 2563 - Mar 2564',
       detail:
@@ -82,17 +92,17 @@
 </script>
 
 <div
-  class="container-experience d-flex justify-content-center align-items-center flex-column gap-4  px-4"
+  class="container-experience d-flex justify-content-center align-items-center flex-column gap-4 px-4"
 >
   <div class="row w-100 gy-4 my-4">
     <div
-      class="text-focus-in col-12 col-sm-12  col-md-6 col-lg-4 d-flex flex-column"
+      class="text-focus-in col-12 col-sm-12 col-md-6 col-lg-4 d-flex flex-column"
     >
       <span class="experience-tag">Resume</span>
       <span class="experience-titel"> Education & Experience</span>
     </div>
     {#each experienceData as item, index}
-      <div class="col-12 col-sm-12  col-md-6 col-lg-4 text-focus-in">
+      <div class="col-12 col-sm-12 col-md-6 col-lg-4 text-focus-in">
         <div
           on:mouseleave={() => {
             hoverCard(index)
@@ -114,7 +124,7 @@
             <div class="experience-card-subtitle">
               {item.work}
             </div>
-            <div class="experience-card-time ">
+            <div class="experience-card-time">
               {item.time}
             </div>
           </div>
@@ -208,6 +218,7 @@
     color: #5fa8d3;
     font-size: 0.75rem;
     font-weight: 500;
+    text-wrap: nowrap;
   }
   .experience-card-detail {
     font-size: 0.75rem;
