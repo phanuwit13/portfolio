@@ -14,7 +14,7 @@
       work: 'Big C Supercenter Public Company Limited',
       time: 'Aug 2566 - Now',
       detail:
-        'I currently work as a Front-End Developer at HarmonyX Solution Co., Ltd. My responsibilities include web e-commerce, web application back office and implemented software solutions based on the company requirements such as implemented new feature for customer.',
+        'I currently work as a Senior Software Engineer at Big C Supercenter Public Company Limited, where I conduct code reviews to ensure quality and adherence to standards. I engage in architectural discussions, mentor junior developers, and work with technologies like Next.js, React.js, Typescript, and Spring Boot to develop scalable front-end solutions.',
       active: false,
     },
     {
@@ -32,7 +32,7 @@
       work: 'HarmonyX Solution Co., Ltd.',
       time: 'Otc 2565 - Aug 2566',
       detail:
-        'I currently work as a Front-End Developer at HarmonyX Solution Co., Ltd. My responsibilities include web e-commerce, web application back office and implemented software solutions based on the company requirements such as implemented new feature for customer.',
+        'I work as a Front-End Developer at HarmonyX Solution Co., Ltd. My responsibilities include web e-commerce, web application back office and implemented software solutions based on the company requirements such as implemented new feature for customer.',
       active: false,
     },
     {
