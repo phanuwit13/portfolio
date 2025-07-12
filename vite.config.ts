@@ -1,8 +1,10 @@
 import tailwindcss from '@tailwindcss/vite';
-import { sveltekit, sveltekit } from '@sveltejs/kit/vite';
+import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vite';
 import path from 'path';
 import svelteSVG from '@hazycora/vite-plugin-svelte-svg';
+
+const repo = 'portfolio';
 
 export default defineConfig({
 	plugins: [
@@ -13,5 +15,6 @@ export default defineConfig({
 			requireSuffix: true // Set false to accept '.svg' without the '?component'
 		})
 	],
-	resolve: { alias: { $lib: path.resolve('./src/lib') } }
+	resolve: { alias: { $lib: path.resolve('./src/lib') } },
+  base: process.env.NODE_ENV === 'production' ? `/${repo}/` : '/',
 });
