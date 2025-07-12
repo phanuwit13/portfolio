@@ -22,9 +22,6 @@ const config = {
 		}),
 		paths: {
 			base: dev ? '' : `/${repo}`
-		},
-		prerender: {
-			default: true
 		}
 	}
 };
