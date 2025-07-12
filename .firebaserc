@@ -1,8 +1,0 @@
-{
-  "projects": {
-    "default": "dev-dog-healt",
-    "dev": "dev-dog-healt",
-    "prod": "dog-health-8a19b"
-  },
-  "targets": {}
-}
