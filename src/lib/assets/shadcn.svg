@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 100 100"
+  class="developer-icons size-5" fill="none">
+  <g stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25"
+    clip-path="url(#shadcnUI__a)">
+    <path d="M81.25 50 50 81.25m25-65.625L15.625 75"></path>
+  </g>
+  <defs>
+    <clipPath id="shadcnUI__a">
+      <path fill="#fff" d="M0 0h100v100H0z"></path>
+    </clipPath>
+  </defs>
+</svg>
