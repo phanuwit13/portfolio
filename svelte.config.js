@@ -15,10 +15,10 @@ const config = {
 		// If your environment is not supported, or you settled on a specific environment, switch out the adapter.
 		// See https://svelte.dev/docs/kit/adapters for more information about adapters.
 		adapter: adapter({
-			pages: 'build',
-			assets: 'build',
+			// pages: 'build',
+			// assets: 'build',
 			fallback: 'index.html', // ถ้าใช้ SPA, ถ้าไม่ใช้ก็ลบออกได้
-			precompress: false
+			// precompress: false
 		}),
 		paths: {
 			base: dev ? '' : `/${repo}`

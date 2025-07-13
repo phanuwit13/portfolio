@@ -5,11 +5,10 @@
 	"type": "module",
 	"scripts": {
 		"dev": "vite dev",
-		"build": "cross-env NODE_ENV=development vite build",
-		"build-prod": "cross-env NODE_ENV=production vite build-prod",
+		"build": "cross-env NODE_ENV=production vite build",
 		"preview": "vite preview",
-		"predeploy": "npm run build-prod",
-		"deploy": "gh-pages -d build-prod"
+		"predeploy": "npm run build",
+		"deploy": "gh-pages -d build"
 	},
 	"devDependencies": {
 		"@eslint/compat": "^1.2.5",
