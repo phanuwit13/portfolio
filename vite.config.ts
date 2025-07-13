@@ -16,5 +16,5 @@ export default defineConfig({
 		})
 	],
 	resolve: { alias: { $lib: path.resolve('./src/lib') } },
-  base: process.env.NODE_ENV === 'production' ? `/${repo}/` : '/',
+  base: process.env.NODE_ENV === 'production' ? `/${repo}` : '/',
 });
