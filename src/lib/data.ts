@@ -110,7 +110,7 @@ export const awards = [
 ];
 
 export const profile = {
-	profileImg: '/images/phanuwit-profile.png',
+	profileImg: '/images/phanuwit-profile.jpeg',
 	name: 'Phanuwit Kittirong',
 	subtitle: 'Software Engineer / Full-stack Developer',
 	links: [
